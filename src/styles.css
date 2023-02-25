@@ -1,0 +1,17 @@
+h3 {
+    color:white;
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+    vertical-align: bottom;
+    background-color: lightskyblue;
+    height: 40px;
+    padding-top: 5px;
+}
+.form-control.ng-touched.ng-invalid {
+    border: 1px solid red;  
+}
+table,th,td{
+    border: 1px solid gray
+}

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container">
+    <h2>Puppy student : Authentication</h2>
+
+
+    <ul class="nav navbar-nav right-align" routerLinkActive="active">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Book">Book</a>
+      </li>
+      <ng-template [ngIf]= "!_auth.isAuthenticated()">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register">Register</a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col-sm-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+    <form [formGroup]= "bookForm">
+        <div class="row">
+            <div class="row col-sm-5">
+                <h3 class="title">My First HTTP form - "book !!! "</h3>
+<br><br>
+<div class="form-group">
+    <label for="bookid">Book Id</label>
+    <input type="text" id="bookid" name="bookid" ngModel
+    formControlName= "bookid" 
+     class="form-control" autocomplete="off">
+  </div><br>
+  <div class="form-group">
+    <label for="bookname">Book Name</label>
+    <input type="text" id="bookname" name="bookname" ngModel
+    formControlName= "bookname" 
+     class="form-control" autocomplete="off">
+  </div><br>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" id="author" name="author" ngModel
+    formControlName= "author" 
+     class="form-control" autocomplete="off">
+  </div><br>
+
+
+  <div class="form-group">
+    <button class="btn btn-info" (click)= "onPushBook()" [disabled]= "!bookForm.valid">Push Book</button>
+    <button class="btn btn-info" (click)= "onSave()" [disabled]= "!bookForm.valid">Push Book</button>
+    <button class="btn btn-info" (click)= "onGet()">Get Book</button>
+
+
+  </div>
+
+
+
+  <table class="table">
+    <tr>
+      <th>Book Id</th>
+      <th>Book Name</th>
+      <th>Author</th>
+    </tr>
+
+<tr *ngFor= "let obj of myBooks">
+  <td> {{obj.bookid}} </td>
+  <td> {{obj.bookname}} </td>
+  <td> {{obj.author}} </td>
+</tr>
+  </table>
+            </div>
+        </div>
+    </form>
+    <br><br>
+    </div>
+
+   
+       
+  
+    
